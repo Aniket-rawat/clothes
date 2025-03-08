@@ -475,48 +475,7 @@ h2{
     font-size: 18px;
     padding: 0 0 0 3px;
 }
-svg{
-    margin: auto;
-    max-width: 100%!important;
-    display: block;
-    max-height: 90px !important;
-    transform: scale(.8);
-    fill: var(--bg-color-dark-green);
-}
-.darkmode svg{
-    fill: var(--bg-color-white);
-}
-svg:hover{
-    transform: scale(1);
-    
-}
 
-/* svg path{
-    height: 90px !important;
-} */
-.service{
-    margin: 50px auto;
-    max-height: 106px !important;
-}
-.service>div{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    
-}
-
-.service-body{
-    display: grid;  
-    grid-template-columns:repeat(2,100%);
-    align-items: center !important;
-    
-}
-.service-body h4{
-    font-weight: bold;
-}
-.service-body h4, .service-body p{
-    text-transform: capitalize;
-    text-wrap: nowrap;
-}
 .footer{
     background-color: var(--bg-color-black);
     padding: 80px 0;
