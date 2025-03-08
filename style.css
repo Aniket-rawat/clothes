@@ -645,9 +645,9 @@ h2{
     
     .style>div>div:nth-child(2)>div:nth-child(2) img{
         transition: transform 0.2s;
-        transform: scale(1.5); 
+        transform: scale(1.4); 
         position: relative;
-        left: 100px;
+        left: 110px;
     }
     .style>div>div:nth-child(2)>div:nth-child(2) img:hover{
         transform: scale(1.3); 
