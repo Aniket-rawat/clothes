@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Clothes</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <!-- font-awesome 4.7.0 CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
+        <!-- animate.style -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <link id="themeStylesheet" rel="stylesheet" href="style.css">
+        <style>
+            #searchBar {
+                display: none;
+            }
+    
+            .custom-width {
+                width: 100%;
+            }
+            input{
+                width: 100%;
+            }
+
+            
+
+    
+            @media (max-width:600px) {
+                .custom-width {
+                    width: auto;
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+            <nav class="navbar navbar-expand-sm py-3">
+                <div class="container header d-flex align-items-center">
+                    <a class="navbar-brand" href="index.html">
+
+                        <img src="images/logo.png" alt=""  class="d-block img-fluid">
+                    </a>
+                    <!-- Search bar and cart icon outside the burger menu -->
+                    <div class="d-flex custom-width justify-content-center ms-3">
+                        <div class="d-none d-lg-block w-100">
+                            <form class="input-group border-0 rounded-pill bg-white">
+                                <button class="btn border-0 my-2 my-sm-0" type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                                <input type="text" class="form-control border-0 me-sm-2 bg-transparent"  placeholder="Search" />
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center order-md-5">
+                        <button class="btn d-block d-lg-none" id="searchBtn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                        <a href="cart.html" class="btn">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                        <a href="#exampleModal1" data-bs-toggle="modal" class="btn">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        </a>
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="btn-mode">
+                            <div class="btn-indicator">
+                                <div class="btn-icon-container">
+                                    <i class="btn-icon fa-solid fa-sun"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse  order-md-3  col-lg-4" id="collapsibleNavId">
+                        <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-nowrap" href="shop.html" aria-current="page">Shop
+                                    <span class="visually-hidden">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-nowrap" href="#">New Arrivals</a>
+                            </li>
+                            <li class="nav-item dropdown mega-dropdown">
+                                <a class="nav-link  text-nowrap dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"> categories</a>
+                                <div class="dropdown-menu mega-menu" aria-labelledby="dropdownId">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="dropdown-header">MEN</h5>
+                                            <a class="dropdown-item" href="#">T-Shirts</a>
+                                            <a class="dropdown-item" href="#">Shorts</a>
+                                            <a class="dropdown-item" href="#">Shirts</a>
+                                            <a class="dropdown-item" href="#">Hoodies</a>
+                                            <a class="dropdown-item" href="#">Jeans</a>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="dropdown-header">WOMEN</h5>
+                                            <a class="dropdown-item" href="#">T-Shirts</a>
+                                            <a class="dropdown-item" href="#">Shorts</a>
+                                            <a class="dropdown-item" href="#">Shirts</a>
+                                            <a class="dropdown-item" href="#">Hoodies</a>
+                                            <a class="dropdown-item" href="#">Jeans</a>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="dropdown-header">KIDS</h5>
+                                            <a class="dropdown-item" href="#">T-Shirts</a>
+                                            <a class="dropdown-item" href="#">Shorts</a>
+                                            <a class="dropdown-item" href="#">Shirts</a>
+                                            <a class="dropdown-item" href="#">Hoodies</a>
+                                            <a class="dropdown-item" href="#">Jeans</a>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+            <!-- Hidden Search Bar -->
+            <div class="container-fluid bg-light shadow-sm p-3" id="searchBar">
+                <div class="d-flex justify-content-center">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search" />
+                    <button class="btn btn-danger" id="closeSearch">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+            </div> 
+            <div class="container-fluid header2">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-lg-6 pt-5">
+                            <h1 class="animate__flash" >find clothes that matches</h1>
+                            <h2><span> your style</span></h2>
+                            <p>Browse through our diverse range of meticulously crafted products, thoughtfully designed to celebrate your individuality and cater to your unique taste and lifestyle.</p>
+                            <a  href="shop.html" class="btn btn-lg">shop now</a>
+                            <div class="row pt-5">
+                                <div class="col ">
+                                    <h4 class="number" data-value="200">200+</h4>
+                                    <p>International Brands</p>
+                                </div>
+                                <div class="col">  
+                                    <h4 class="number" data-value="2000">2000+</h4>
+                                    <p>High-Quality Products</p>
+                                </div>
+                                <div class="col">
+                                    <h4 class="number" data-value="30000">30000+</h4>
+                                    <p>Happy Customers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="images/header-img-1.png" class="img-fluid" alt="" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid moving-text">
+                <div class="scrolling_text">
+                    <div class="text">
+                        <span>Festive Offer: Get up to 50% off on all clothing collections at <strong>Trandz </strong>. Shop for men, women & kids apparel online. Shop Now! </span>
+                        <span>Festive Offer: Get up to 50% off on all clothing collections at <strong>Trandz </strong>. Shop for men, women & kids apparel online. Shop Now!</span>
+                        <span>Festive Offer: Get up to 50% off on all clothing collections at <strong>Trandz </strong>. Shop for men, women & kids apparel online. Shop Now!</span>
+                        
+                    <!-- <div class="text">
+                        <span>Festive Offer: Get up to 50% off on all clothing collections at Allen Solly. Shop for men, women & kids apparel online. Shop Now!</span>
+                        <span>Shop the sale online at Trandz and stock up on lots of great deals! Discover latest styles for less from all our departments.</span>
+                        <span>Shop the sale online at Trandz and stock up on lots of great deals! Discover latest styles for less from all our departments.</span>
+                    </div> -->
+                </div>
+            </div>
+        </header> 
+        <button id="back-to-top"><i class="bi bi-caret-up-fill"></i></button>
+        <main>
+            <div class="container-fluid arrivals pt-5">
+                <div class="container">
+                    <div class="row text-center mb-3">
+                        <div class="col">
+                            <h2>New Arrivals</h2>
+                        </div>
+                    </div>
+                    <div class="row row-cols-2">
+                        <div class="col-md-3">
+                            <img src="images/Arrivals-img-1.jpg" alt="" class="img-fluid rounded-4">
+                            <h5>T-shirt with tape detailes</h5>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star"></span><span>  4.5/5</span>
+                            <h6>$120</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="images/Arrivals-img-2.jpg" alt="" class="img-fluid rounded-4">
+                            <h5>skinny fit jeans</h5>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star"></span><span>  4.3/5</span>
+                            <h6>$240</h6>
+                        </div>
+                        <div class=" col-md-3">
+                            <img src="images/Arrivals-img-3.jpg" alt="" class="img-fluid rounded-4">
+                            <h5>checkered shirt</h5>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star"></span><span>  4/5</span>
+                            <h6>$180</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="images/Arrivals-img-4.jpg" alt="" class="img-fluid rounded-4">
+                            <h5>sleeve striped t-shirt</h5>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star"></span><span>  3.5/5</span>
+                            <h6>$100</h6>
+                        </div>
+
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-lg mt-5">View All</a>
+                    </div> 
+                    <hr class="my-5"> 
+                </div>   
+            </div>
+            <div class="container-fluid sales">
+                <div class="container">
+                    <div class="row text-center mb-3">
+                        <div class="col">
+                            <h2>Top selling</h2>
+                        </div>
+                    </div>
+                    <div class="row row-cols-2">
+                        <div class="col-md">
+                            <img src="images/sales-img-1.jpg" alt="" class="img-fluid rounded-4">
+                            <h5>vertical striped T-shirt</h5>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star"></span><span>  4.5/5</span>
+                            <h6>$120</h6>
+                        </div>
+                        <div class="col-md">
+                            <img src="images/sales-img-2.jpg" alt="" class="img-fluid rounded-4">
+                            <h5>courage graphic t-shirt</h5>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star"></span><span>  4.3/5</span>
+                            <h6>$240</h6>
+                        </div>
+                        <div class=" col-md">
+                            <img src="images/sales-img-3.jpg" alt="" class="img-fluid rounded-4">
+                            <h5>loose fit Bermuda shorts</h5>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star"></span><span>  4/5</span>
+                            <h6>$180</h6>
+                        </div>
+                        <div class="col-md">
+                            <img src="images/sales-img-4.jpg" alt="" class="img-fluid rounded-4">
+                            <h5>faded skinny jeans</h5>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star"></span><span>  3.5/5</span>
+                            <h6>$100</h6>
+                        </div>
+
+                    </div>
+                    <div>
+                        <a href="#" class="btn btn-lg mt-5">View All</a>
+                    </div> 
+                    <hr class="my-5"> 
+                </div>   
+            </div>
+            <div class="container-fluid style mb-5">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="text-center">browse by dress style</h2>
+                    </div>
+                    <div class="row gap-4 my-4">
+                        <div class="col-md-4 ">
+                            <h3 class="mt-5 md-ms-5">casual</h3>
+                            <img src="images/style-img-1.png" alt="">
+                        </div>
+                        <div class="col-md  ps-5">
+                            <h3 class="mt-5 md-ms-5">formal</h3>
+                            <img src="images/style-img-2.png" class="float-end" alt="">
+                        </div>
+                    </div>
+                    <div class="row gap-4">
+                        <div class="col-sm-6 col-md  ps-5">
+                            <h3 class="md-ms-5 mt-5">gym</h3>
+                            <img src="images/style-img-4.png" class="float-end" alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-4 ">
+                            <h3 class="mt-5 md-ms-5">party</h3>
+                            <img src="images/style-img-3.png" class="float-end" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid review">
+                <div class="container mb-5">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <h5>Meredith, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                            <p>Very pleased with the ease of the website, the quality of the product, 
+                                and the shipping time. We are first-time customers and are overall very happy. Jan. 24, 2025.</p>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <h5>Ruby, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                            <p>As always, excellent customer service from trendz, which is why I have been a repeat and loyal customer for over 10 years!! Thank you. Jan. 13, 2025.</p>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <h5>Damion, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                            <p>I love your clothing. Dec. 27, 2024.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <h5>Garima, India <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                            <p>It was so amazing... I ordered it for my farewell, and it was so beautiful; the fabric was amazing. Dec. 12, 2024.</p>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <h5>Leila, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                            <p>Nice quality of fabrics and designs. Good communication related to orders and excellent quality standards. Nov. 28, 2024.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <h5>Suhail, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                            <p>The product looks just like the picture. I am completely satisfied with it. Nov. 26, 2024.</p>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star checked text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <span class="fa fa-star text-warning"></span>
+                            <h5>Vandana, India <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                            <p>Such a beautiful saree. It's more beautiful than I imagined! And it's stitched so well too. Delivery was smooth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service container">
+                <div class="row">
+                    <div class="col-md-4 service-body">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -117 679.99892 679">
+                            <path d="m12.347656 378.382812h37.390625c4.371094 37.714844 36.316407 66.164063 74.277344 66.164063 37.96875 0 69.90625-28.449219 74.28125-66.164063h241.789063c4.382812 37.714844 36.316406 66.164063 74.277343 66.164063 37.96875 0 69.902344-28.449219 74.285157-66.164063h78.890624c6.882813 0 12.460938-5.578124 12.460938-12.460937v-352.957031c0-6.882813-5.578125-12.464844-12.460938-12.464844h-432.476562c-6.875 0-12.457031 5.582031-12.457031 12.464844v69.914062h-105.570313c-4.074218.011719-7.890625 2.007813-10.21875 5.363282l-68.171875 97.582031-26.667969 37.390625-9.722656 13.835937c-1.457031 2.082031-2.2421872 4.558594-2.24999975 7.101563v121.398437c-.09765625 3.34375 1.15624975 6.589844 3.47656275 9.003907 2.320312 2.417968 5.519531 3.796874 8.867187 3.828124zm111.417969 37.386719c-27.527344 0-49.851563-22.320312-49.851563-49.847656 0-27.535156 22.324219-49.855469 49.851563-49.855469 27.535156 0 49.855469 22.320313 49.855469 49.855469 0 27.632813-22.21875 50.132813-49.855469 50.472656zm390.347656 0c-27.53125 0-49.855469-22.320312-49.855469-49.847656 0-27.535156 22.324219-49.855469 49.855469-49.855469 27.539063 0 49.855469 22.320313 49.855469 49.855469.003906 27.632813-22.21875 50.132813-49.855469 50.472656zm140.710938-390.34375v223.34375h-338.375c-6.882813 0-12.464844 5.578125-12.464844 12.460938 0 6.882812 5.582031 12.464843 12.464844 12.464843h338.375v79.761719h-66.421875c-4.382813-37.710937-36.320313-66.15625-74.289063-66.15625-37.960937 0-69.898437 28.445313-74.277343 66.15625h-192.308594v-271.324219h89.980468c6.882813 0 12.464844-5.582031 12.464844-12.464843 0-6.882813-5.582031-12.464844-12.464844-12.464844h-89.980468v-31.777344zm-531.304688 82.382813h99.703125v245.648437h-24.925781c-4.375-37.710937-36.3125-66.15625-74.28125-66.15625-37.960937 0-69.90625 28.445313-74.277344 66.15625h-24.929687v-105.316406l3.738281-5.359375h152.054687c6.882813 0 12.460938-5.574219 12.460938-12.457031v-92.226563c0-6.882812-5.578125-12.464844-12.460938-12.464844h-69.796874zm-30.160156 43h74.777344v67.296875h-122.265625zm0 0"></path>
+                        </svg>
+                        <div class="media-body">
+                            <h4>free shipping</h4>
+                            <p>free shipping world wide</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 service-body">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path d="M472,432h-24V280c-0.003-4.418-3.588-7.997-8.006-7.994c-2.607,0.002-5.05,1.274-6.546,3.41l-112,160     c-2.532,3.621-1.649,8.609,1.972,11.14c1.343,0.939,2.941,1.443,4.58,1.444h104v24c0,4.418,3.582,8,8,8s8-3.582,8-8v-24h24     c4.418,0,8-3.582,8-8S476.418,432,472,432z M432,432h-88.64L432,305.376V432z"></path>
+                                        <path d="M328,464h-94.712l88.056-103.688c0.2-0.238,0.387-0.486,0.56-0.744c16.566-24.518,11.048-57.713-12.56-75.552     c-28.705-20.625-68.695-14.074-89.319,14.631C212.204,309.532,207.998,322.597,208,336c0,4.418,3.582,8,8,8s8-3.582,8-8     c-0.003-26.51,21.486-48.002,47.995-48.005c10.048-0.001,19.843,3.151,28.005,9.013c16.537,12.671,20.388,36.007,8.8,53.32     l-98.896,116.496c-2.859,3.369-2.445,8.417,0.924,11.276c1.445,1.226,3.277,1.899,5.172,1.9h112c4.418,0,8-3.582,8-8     S332.418,464,328,464z"></path>
+                                        <path d="M216.176,424.152c0.167-4.415-3.278-8.129-7.693-8.296c-0.001,0-0.002,0-0.003,0     C104.11,411.982,20.341,328.363,16.28,224H48c4.418,0,8-3.582,8-8s-3.582-8-8-8H16.28C20.283,103.821,103.82,20.287,208,16.288     V40c0,4.418,3.582,8,8,8s8-3.582,8-8V16.288c102.754,3.974,185.686,85.34,191.616,188l-31.2-31.2     c-3.178-3.07-8.242-2.982-11.312,0.196c-2.994,3.1-2.994,8.015,0,11.116l44.656,44.656c0.841,1.018,1.925,1.807,3.152,2.296     c0.313,0.094,0.631,0.172,0.952,0.232c0.549,0.198,1.117,0.335,1.696,0.408c0.08,0,0.152,0,0.232,0c0.08,0,0.152,0,0.224,0     c0.609-0.046,1.211-0.164,1.792-0.352c0.329-0.04,0.655-0.101,0.976-0.184c1.083-0.385,2.069-1.002,2.888-1.808l45.264-45.248     c3.069-3.178,2.982-8.242-0.196-11.312c-3.1-2.994-8.015-2.994-11.116,0l-31.976,31.952     C425.933,90.37,331.38,0.281,216.568,0.112C216.368,0.104,216.2,0,216,0s-0.368,0.104-0.568,0.112     C96.582,0.275,0.275,96.582,0.112,215.432C0.112,215.632,0,215.8,0,216s0.104,0.368,0.112,0.568     c0.199,115.917,91.939,210.97,207.776,215.28h0.296C212.483,431.847,216.013,428.448,216.176,424.152z"></path>
+                                        <path d="M323.48,108.52c-3.124-3.123-8.188-3.123-11.312,0L226.2,194.48c-6.495-2.896-13.914-2.896-20.408,0l-40.704-40.704     c-3.178-3.069-8.243-2.981-11.312,0.197c-2.994,3.1-2.994,8.015,0,11.115l40.624,40.624c-5.704,11.94-0.648,26.244,11.293,31.947     c9.165,4.378,20.095,2.501,27.275-4.683c7.219-7.158,9.078-18.118,4.624-27.256l85.888-85.888     C326.603,116.708,326.603,111.644,323.48,108.52z M221.658,221.654c-0.001,0.001-0.001,0.001-0.002,0.002     c-3.164,3.025-8.148,3.025-11.312,0c-3.125-3.124-3.125-8.189-0.002-11.314c3.124-3.125,8.189-3.125,11.314-0.002     C224.781,213.464,224.781,218.53,221.658,221.654z"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <div class="media-body">
+                            <h4>24 X 7 service</h4>
+                            <p>online service for new customer</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 service-body">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -14 512.00001 512">
+                            <path d="m136.964844 308.234375c4.78125-2.757813 6.417968-8.878906 3.660156-13.660156-2.761719-4.777344-8.878906-6.417969-13.660156-3.660157-4.78125 2.761719-6.421875 8.882813-3.660156 13.660157 2.757812 4.78125 8.878906 6.421875 13.660156 3.660156zm0 0"></path>
+                            <path d="m95.984375 377.253906 50.359375 87.230469c10.867188 18.84375 35.3125 25.820313 54.644531 14.644531 19.128907-11.054687 25.703125-35.496094 14.636719-54.640625l-30-51.96875 25.980469-15c4.78125-2.765625 6.421875-8.878906 3.660156-13.660156l-13.003906-22.523437c1.550781-.300782 11.746093-2.300782 191.539062-37.570313 22.226563-1.207031 35.542969-25.515625 24.316407-44.949219l-33.234376-57.5625 21.238282-32.167968c2.085937-3.164063 2.210937-7.230469.316406-10.511719l-20-34.640625c-1.894531-3.28125-5.492188-5.203125-9.261719-4.980469l-38.472656 2.308594-36.894531-63.90625c-5.34375-9.257813-14.917969-14.863281-25.605469-14.996094-.128906-.003906-.253906-.003906-.382813-.003906-10.328124 0-19.703124 5.140625-25.257812 13.832031l-130.632812 166.414062-84.925782 49.03125c-33.402344 19.277344-44.972656 62.128907-25.621094 95.621094 17.679688 30.625 54.953126 42.671875 86.601563 30zm102.324219 57.238282c5.523437 9.554687 2.253906 21.78125-7.328125 27.316406-9.613281 5.558594-21.855469 2.144531-27.316407-7.320313l-50-86.613281 34.640626-20c57.867187 100.242188 49.074218 85.011719 50.003906 86.617188zm-22.683594-79.296876-10-17.320312 17.320312-10 10 17.320312zm196.582031-235.910156 13.820313 23.9375-12.324219 18.664063-23.820313-41.261719zm-104.917969-72.132812c2.683594-4.390625 6.941407-4.84375 8.667969-4.796875 1.707031.019531 5.960938.550781 8.527344 4.996093l116.3125 201.464844c3.789063 6.558594-.816406 14.804688-8.414063 14.992188-1.363281.03125-1.992187.277344-5.484374.929687l-123.035157-213.105469c2.582031-3.320312 2.914063-3.640624 3.425781-4.480468zm-16.734374 21.433594 115.597656 200.222656-174.460938 34.21875-53.046875-91.878906zm-223.851563 268.667968c-4.390625-7.597656-6.710937-16.222656-6.710937-24.949218 0-17.835938 9.585937-34.445313 25.011718-43.351563l77.941406-45 50 86.601563-77.941406 45.003906c-23.878906 13.78125-54.515625 5.570312-68.300781-18.304688zm0 0"></path>
+                            <path d="m105.984375 314.574219c-2.761719-4.78125-8.878906-6.421875-13.660156-3.660157l-17.320313 10c-4.773437 2.757813-10.902344 1.113282-13.660156-3.660156-2.761719-4.78125-8.878906-6.421875-13.660156-3.660156s-6.421875 8.878906-3.660156 13.660156c8.230468 14.257813 26.589843 19.285156 40.980468 10.980469l17.320313-10c4.78125-2.761719 6.421875-8.875 3.660156-13.660156zm0 0"></path>
+                            <path d="m497.136719 43.746094-55.722657 31.007812c-4.824218 2.6875-6.5625 8.777344-3.875 13.601563 2.679688 4.820312 8.765626 6.566406 13.601563 3.875l55.71875-31.007813c4.828125-2.6875 6.5625-8.777344 3.875-13.601562-2.683594-4.828125-8.773437-6.5625-13.597656-3.875zm0 0"></path>
+                            <path d="m491.292969 147.316406-38.636719-10.351562c-5.335938-1.429688-10.820312 1.734375-12.25 7.070312-1.429688 5.335938 1.738281 10.816406 7.074219 12.246094l38.640625 10.351562c5.367187 1.441407 10.824218-1.773437 12.246094-7.070312 1.429687-5.335938-1.738282-10.820312-7.074219-12.246094zm0 0"></path>
+                            <path d="m394.199219 7.414062-10.363281 38.640626c-1.429688 5.335937 1.734374 10.816406 7.070312 12.25 5.332031 1.425781 10.816406-1.730469 12.25-7.070313l10.359375-38.640625c1.429687-5.335938-1.734375-10.820312-7.070313-12.25-5.332031-1.429688-10.816406 1.734375-12.246093 7.070312zm0 0"></path>
+                        </svg>
+                        <div class="media-body">
+                            <h4>festival offer</h4>
+                            <p>new online special festival offer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+         <!-- Modal1 -->
+         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"> 
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body p-0">
+                        <div class="container-fluid g-0">
+                            <div class="row">
+                                <div class="col-md-4 p-5">
+                                    <h2>Login</h2>
+                                    <p>Get access to your Orders, Wishlist and Recommendations</p>
+                                </div>
+                                <div class="col-md-8 d-flex flex-column p-5">
+                                    <div class="row mb-5 pb-5">
+                                        <div class="col">
+                                            <form class="row g-3">
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control" id="floatingInput"
+                                                        placeholder="name@example.com">
+                                                    <label for="floatingInput">Enter Email/Mobile number</label>
+                                                    <p><small>By continuing, you agree to Trandz's Terms of Use and
+                                                            Privacy
+                                                            Policy.</small></p>
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button class="btn" type="button">Request OTP</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-end mt-5 pt-5">
+                                        <div class="col text-center">
+                                            <a href="#exampleModal2" data-bs-toggle="modal">New to Trandz? Create an
+                                                account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal2 -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"> 
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body p-0">
+                        <div class="container-fluid g-0">
+                            <div class="row">
+                                <div class="col-md-4 p-5">
+                                <h2>Looks like you're new here!
+                                    </h2>
+                                    <p>Sign up with your mobile number to get started</p>
+                                </div>
+                                <div class="col-md-8 d-flex flex-column p-5">
+                                    <div class="row mb-5 pb-5">
+                                        <div class="col">
+                                            <form class="row g-3">
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control" id="floatingInput"
+                                                        placeholder="name@example.com">
+                                                    <label for="floatingInput">Enter Mobile number</label>
+                                                    <p><small>By continuing, you agree to Trandz's Terms of Use and
+                                                            Privacy
+                                                            Policy.</small></p>
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button class="btn"
+                                                        type="button">Continue</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-end mt-5 pt-5">
+                                        <div class="col text-center">
+                                            <a href="#exampleModal1" data-bs-toggle="modal">Existing User? Log in</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <!-- place footer here -->
+            <div class="container-fluid footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 text-center text-lg-start order-4 order-lg-0">
+                            <img src="images/footer-logo.png" alt="" width="150px" height="auto">
+                            <p>We have clothes that suits your style and which you're proud to wear. from women to men.</p>
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <p>&copy; 2025 www.trendz.com. All rights reserved.</p>
+                        </div>
+                        <div class="col-4 offset-lg-1 col-lg-3 text-center text-md-start">
+                            <h3>company</h3>
+                            <ul>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">feature</a></li>
+                                <li><a href="#">works</a></li>
+                                <li><a href="#">career</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4 col-lg-2 text-center text-md-start">
+                            <h3>help</h3>
+                            <ul>
+                                <li><a href="#">customer support</a></li>
+                                <li><a href="#">delivery details</a></li>
+                                <li><a href="#">terms & conditions</a></li>
+                                <li><a href="#">privacy policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4 col-lg-2 text-center text-md-start">
+                            <h3>faq</h3>
+                            <ul>
+                                <li><a href="#">account</a></li>
+                                <li><a href="#">manage deliveries</a></li>
+                                <li><a href="#">orders</a></li>
+                                <li><a href="#">payments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            // Add your JavaScript code here
+            document.getElementById("searchBtn").addEventListener("click", function () {
+                document.getElementById("searchBar").style.display = "block";
+            })
+            document.getElementById("closeSearch").addEventListener("click", function () {
+                document.getElementById("searchBar").style.display = "none";
+            })
+            document.addEventListener("click", function (event) {
+                let searchBar = document.getElementById("searchBar");
+                let searchBtn = document.getElementById("searchBtn");
+                if (!searchBar.contains(event.target) && !searchBtn.contains(event.target)) {
+                    searchBar.style.display = "none";
+                }
+            })
+        </script>
+        <!-- light to dark mode toggle -->
+        <script>
+            const body = document.querySelector('body');
+            const btn = document.querySelector('.btn-mode');
+            const icon = document.querySelector('.btn-icon');
+    
+            //to save the dark mode use the object "local storage".
+    
+            //function that stores the value true if the dark mode is activated or false if it's not.
+            function store(value){
+              localStorage.setItem('darkmode', value);
+            }
+    
+            //function that indicates if the "darkmode" property exists. It loads the page as we had left it.
+            function load(){
+              const darkmode = localStorage.getItem('darkmode');
+            
+              //if the dark mode was never activated
+              if(!darkmode){
+                store(false);
+                icon.classList.add('fa-sun');
+              } else if( darkmode == 'true'){ //if the dark mode is activated
+                body.classList.add('darkmode');
+                icon.classList.add('fa-moon');
+              } else if(darkmode == 'false'){ //if the dark mode exists but is disabled
+                icon.classList.add('fa-sun');
+              }
+            }
+    
+    
+            load();
+    
+            btn.addEventListener('click', () => {
+            
+              body.classList.toggle('darkmode');
+              icon.classList.add('animated');
+            
+              //save true or false
+              store(body.classList.contains('darkmode'));
+            
+              if(body.classList.contains('darkmode')){
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+              }else{
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+              }
+          
+              setTimeout( () => {
+                icon.classList.remove('animated');
+              }, 500)
+            })
+            
+        </script>
+        
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <!-- create a bottom to top bar -->
+        <script>
+            const backToTop = document.getElementById('back-to-top');
+                window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.style.display = 'block';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            })
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            })
+        </script>
+        <!-- Automatic numbers increase up-to given limit  -->
+        <script>
+            const items = document.querySelectorAll('.number')
+    
+                const updateCount = (e) => {
+                    const value = parseInt(e.dataset.value);
+                    const increment = Math.ceil(value/1000);
+        
+                    let initialValue = 0;
+                    const increaseCount = setInterval(() =>{
+                        initialValue += increment;
+        
+                        if(initialValue > value){
+                            e.innerText = `${value}+`;
+                            clearInterval(increaseCount);
+                            return;
+                        }
+                        e.innerText = `${initialValue}+`;
+                    })
+                
+                };
+                items.forEach((item) => {
+                    updateCount(item);
+                }
+            );
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

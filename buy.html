@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Clothes</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <!-- font-awesome 4.7.0 CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
+        <!-- owlcarousel2 CSS--> 
+        <link rel="stylesheet"href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+        <!-- owlcarousel2 JS--> 
+        <script src="http://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+        <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+        <!-- custom CSS -->
+        <link rel="stylesheet" href="buy-style.css">
+        <style>
+            #searchBar {
+                display: none;
+            }
+    
+            .custom-width {
+                width: 100%;
+            }
+            input{
+                width: 100%;
+            }
+            .progress{
+    	        width: 200px;
+                height: 6px;
+            }
+            .column {
+                 display: none;
+            }
+            .show {
+                display: block;
+            }
+            @media (max-width:600px) {
+                .custom-width {
+                    width: auto;
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+
+    <body >
+        <header>
+            <!-- place navbar here -->
+            <nav class="navbar navbar-expand-sm py-3">
+                <div class="container header d-flex align-items-center">
+                    <a class="navbar-brand" href="index.html">
+
+                        <img src="images/logo.png" alt=""  class="d-block img-fluid">
+                    </a>
+                    <!-- Search bar and cart icon outside the burger menu -->
+                    <div class="d-flex custom-width justify-content-center ms-3">
+                        <div class="d-none d-lg-block w-100">
+                            <form class="input-group border-0 rounded-pill bg-white">
+                                <button class="btn border-0 my-2 my-sm-0" type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                                <input type="text" class="form-control border-0 me-sm-2 bg-transparent"  placeholder="Search" />
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center order-md-5">
+                        <button class="btn d-block d-lg-none" id="searchBtn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                        <a href="cart.html" class="btn">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                        <a href="#exampleModal1" data-bs-toggle="modal" class="btn">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        </a>
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="btn-mode">
+                            <div class="btn-indicator">
+                                <div class="btn-icon-container">
+                                    <i class="btn-icon fa-solid fa-sun"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse  order-md-3  col-lg-4" id="collapsibleNavId">
+                        <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-nowrap" href="shop.html" aria-current="page">Shop
+                                    <span class="visually-hidden">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-nowrap" href="#">New Arrivals</a>
+                            </li>
+                            <li class="nav-item dropdown mega-dropdown">
+                                <a class="nav-link  text-nowrap dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"> categories</a>
+                                <div class="dropdown-menu mega-menu" aria-labelledby="dropdownId">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="dropdown-header">MEN</h5>
+                                            <a class="dropdown-item" href="#">T-Shirts</a>
+                                            <a class="dropdown-item" href="#">Shorts</a>
+                                            <a class="dropdown-item" href="#">Shirts</a>
+                                            <a class="dropdown-item" href="#">Hoodies</a>
+                                            <a class="dropdown-item" href="#">Jeans</a>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="dropdown-header">WOMEN</h5>
+                                            <a class="dropdown-item" href="#">T-Shirts</a>
+                                            <a class="dropdown-item" href="#">Shorts</a>
+                                            <a class="dropdown-item" href="#">Shirts</a>
+                                            <a class="dropdown-item" href="#">Hoodies</a>
+                                            <a class="dropdown-item" href="#">Jeans</a>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="dropdown-header">KIDS</h5>
+                                            <a class="dropdown-item" href="#">T-Shirts</a>
+                                            <a class="dropdown-item" href="#">Shorts</a>
+                                            <a class="dropdown-item" href="#">Shirts</a>
+                                            <a class="dropdown-item" href="#">Hoodies</a>
+                                            <a class="dropdown-item" href="#">Jeans</a>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+            <!-- Hidden Search Bar -->
+            <div class="container-fluid bg-light shadow-sm p-3" id="searchBar">
+                <div class="d-flex justify-content-center">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search" />
+                    <button class="btn btn-danger" id="closeSearch">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+            </div> 
+        </header> 
+        <button id="back-to-top"><i class="bi bi-caret-up-fill"></i></button>
+        <main>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-body-secondary lh-sm">
+                                <small>
+                                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                                        aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                            <li class="breadcrumb-item"><a href="shop.html">Shop</a>
+                                            <li class="breadcrumb-item active" aria-current="page">T-shirts</li>
+                                        </ol>
+                                    </nav>
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row cart-img">
+                        <div class="col col-md-6 col-lg-4">
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 4</div>
+                                <img src="images/Arrivals-img-1.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 4</div>
+                                <img src="images/Arrivals-img-1-2.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 4</div>
+                                <img src="images/Arrivals-img-1-3.jpg" style="width:100%">
+                            </div>
+                                
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 4</div>
+                                <img src="images/Arrivals-img-1-4.jpg" style="width:100%">
+                            </div>
+
+                            
+                                
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+
+                            <div class="caption-container">
+                                <p>
+                                    T-shirt with tape detailes
+                                </p>
+                            </div>
+
+                            <div class="row img-n">
+                                <div class="column-img">
+                                <img class="demo cursor" src="images/Arrivals-img-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                                </div>
+                                <div class="column-img">
+                                <img class="demo cursor" src="images/Arrivals-img-1-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                                </div>
+                                <div class="column-img">
+                                <img class="demo cursor" src="images/Arrivals-img-1-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                </div>
+                                <div class="column-img">
+                                <img class="demo cursor" src="images/Arrivals-img-1-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col col-md-6 col-lg-6 offset-lg-1 py-3">
+                            <div class="row">
+                                <div class="col">
+                                    <h4>Men Hem Tape Detail Cotton Terry Tee</h4>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.5/5</span>
+                                    <h6>&#8377;395 &nbsp; 
+                                        <del>&#8377;999</del> &nbsp;<span class="badge bg-danger rounded-pill">-40%</span></h6>
+                                    <p>This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</p>
+                                </div>
+                                <div class="col">
+                                    <h5>Select Color</h5>
+                                    <div></div><div></div><div></div>
+                                </div>
+                                <div class="col">
+                                    <h5>Choose Size</h5>
+                                    <button class="btn ">small</button>
+                                    <button class="btn ">medium</button>
+                                    <button class="btn ">large</button>
+                                    <button class="btn ">x-large</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn">BUY NOW</button>
+                                    <a class="btn" href="cart.html"> 
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;  ADD TO CART</a>
+                                </div>
+                                <div class="col">
+                                    <h5>Delivery Options </h5>
+                                    <div class="input-group mb-1">
+                                        <input type="text" class="form-control" placeholder="Enter pincode" 
+                                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Check</button>
+                                    </div>
+                                    <p><small>Please enter PIN code to check delivery time & Pay on Delivery Availability</small></p>
+                                    <p>100% Original Products</p>
+                                    <p>Pay on delivery might be available</p>
+                                    <p>Easy 7 days returns and exchanges</p>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid details">
+                <div class="container">
+                    <div class="row">
+                        <div class="col" id="myBtnContainer">
+                            <button class="btn active" onclick="filterSelection('product')">Product Details </button>
+                            <button class="btn" onclick="filterSelection('ratings')">Rating and Reviews </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col product column">
+                            <h2>Product Details 
+                                <i class="fa fa-file-text" aria-hidden="true"></i></h2>
+                            <p>Charcoal Grey solid lounge tshirt, has a round neck and long sleeves</p>
+                            <p>This t-shirt comes with Smart Tech+ feature that gives you superior performance without compromising on comfort. 
+                                Ideal for both leisure and outdoor activities. The Smart Tech+ technology draws perspiration from the skin, keeping the body cool, 
+                                dry and comfortable. Coupled with anti-stat technology and extra soft hand-feel, this feature gives you all-day comfort. The stain 
+                                removal feature makes the t-shirt easy to maintain.
+                            </p>
+                            <h5>Features: </h5>
+                            <p>Anti Bacterial: Designed with Van Heusen's Anti-Bacterial technology, our t-shirt keeps you cool, dry and comfortable to enhance your comfort quotient for everyday use, while making the t-shirt look new for long. N9 Pure Silver Technology on fabric reduces >99% odour-causing bacteria upto 100 washes as per lab tests. Stay fresh for longer.</p>
+                            <p>Smart Tech+: The Smart Tech+ technology draws perspiration from the skin, keeping the body cool, dry and comfortable. Coupled with anti-stat technology and extra soft hand-feel, this feature gives you all-day comfort. The stain removal feature makes the t-shirt easy to maintain.</p>
+                            <p>Easy Stain Release: This technology helps easy release of tough stains from t-shirts.</p>
+                            <p>Wicking: The fabric has wicking property which draws perspiration from the skin keeping the body cool, dry and comfortable.
+                                Anti Stat Technology: Anti-Stat Technology neutralizes electrostatic charges that cause an undesirable clinging effect on t-shirts.</p>
+                            <h5>Size & Fit</h5>
+                            <p>The model (height 6') is wearing a size M</p>
+                            <h5>Material & Care</h5>
+                            <p>Cotton</p>
+                            <p>Machine wash</p>
+                            <p>Cold-gentle cycle</p>
+                            <p>Do not bleach</p>
+                            <p>Tumble dry low</p>
+                            <p>Gentle cycle</p>
+                            <p>Low heat</p>
+                            <p>Do not wring</p>
+                            <p>Do not iron on print </p>
+                            <p>Do not dry clean</p>
+                            <p>Wash with similar colours</p>
+                            <p>Dry in shade</p>
+                            <p>Wash in side out</p>
+                            <h5>Specifications</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <div>
+                                        <p><small>Fabric</small></p>
+                                        <p>Cotton</p>
+                                    </div>
+                                    <div>
+                                        <p><small>Pattern</small></p>
+                                        <p>Solid</p>
+                                    </div>
+                                    <div>
+                                        <p><small>Sustainable</small></p>
+                                        <p>Regular</p>
+                                    </div>
+                                    <div>
+                                        <p><small>Wash Care</small></p>
+                                        <p>Machine Wash</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        <p><small>Neck</small></p>
+                                        <p>Round Neck</p>
+                                    </div>
+                                    <div>
+                                        <p><small>Sleeve Length</small></p>
+                                        <p>Long Sleeves</p>
+                                    </div>
+                                    <div>
+                                        <p><small>Type</small></p>
+                                        <p>Regular</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        
+                        
+                        </div>
+                        <div class="col ratings column">
+                            <h2>Rating and Reviews
+                                <span class="fa fa-star checked text-warning align-text-top"></span></h2>
+                            <div class="row">
+                                <div class="col ">
+                                    
+                                    <h5>4.4 <i class="fa fa-star text-success" aria-hidden="true"></i></h5>
+                                    <p>1.4k Verified Buyers</p>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0">5 &nbsp;
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i> &nbsp;
+                                        </p>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width:85%"></div>
+                                        </div>
+                                        <p class="m-0">&nbsp;826</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0">4&nbsp;
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i> &nbsp;
+                                        </p>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width:75%"></div>
+                                        </div>
+                                        <p class="m-0">&nbsp;347</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0">3&nbsp;
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            &nbsp;
+                                        </p>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width:45%"></div>
+                                        </div>
+                                        <p class="m-0">&nbsp;105</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0">2&nbsp;
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                                        </p>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width:15%"></div>
+                                        </div>
+                                        <p class="m-0">&nbsp;26</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <p class="m-0">1&nbsp;
+                                            <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                                        </p>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" style="width:10%"></div>
+                                        </div>
+                                        <p class="m-0">&nbsp;62</p>  
+                                    </div>
+                                
+                                </div>
+                            </div>
+                            <div class="row py-3">
+                                <div class="col reviews">
+                                    <h4>Customer Reviews (232)</h4>
+                                    <div class="row mt-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <h5>Meredith, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                                            <p>Very pleased with the ease of the website, the quality of the product, 
+                                                and the shipping time. We are first-time customers and are overall very happy. Jan. 24, 2025.</p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <h5>Ruby, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                                            <p>As always, excellent customer service from trendz, which is why I have been a repeat and loyal customer for over 10 years!! Thank you. Jan. 13, 2025.</p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <h5>Damion, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                                            <p>I love your clothing. Dec. 27, 2024.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <h5>Garima, India <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                                            <p>It was so amazing... I ordered it for my farewell, and it was so beautiful; the fabric was amazing. Dec. 12, 2024.</p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <h5>Leila, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                                            <p>Nice quality of fabrics and designs. Good communication related to orders and excellent quality standards. Nov. 28, 2024.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <h5>Suhail, United States <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                                            <p>The product looks just like the picture. I am completely satisfied with it. Nov. 26, 2024.</p>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star checked text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <span class="fa fa-star text-warning"></span>
+                                            <h5>Vandana, India <span><i class="fa fa-check text-white" aria-hidden="true"></i></span></h5>
+                                            <p>Such a beautiful saree. It's more beautiful than I imagined! And it's stitched so well too. Delivery was smooth.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid similar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Similar Products</h2>
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/Arrivals-img-1.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >T-shirt with tape detailes</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;395</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#" class="nav-link content">
+                                        <img src="images/Arrivals-img-4.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5>sleeve striped t-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  3.5/5</span>
+                                        <h6>&#8377;399</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-1.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >Official Marvel Merchandise Iron Man Of War Graphic Printed T-Shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;495</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-2.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >X Harry Potter Graphic Printed Oversized Fit T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;295</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-3.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >Graphic Printed Round Neck Oversized T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;325</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#" class="nav-link content">
+                                        <img src="images/t-shirt-8.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5>Women Solid Pure Cotton T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  3.5/5</span>
+                                        <h6>&#8377;399</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-7.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >Graphic Printed Cotton Oversized T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;395</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-4.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >Graphic Printed Cotton Oversized T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;395</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-5.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >Graphic Printed Cotton Oversized T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;395</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-6.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >Graphic Printed Cotton Oversized T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;395</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-10.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >Graphic Printed Cotton Oversized T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;395</h6>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buy.html" class="nav-link content">
+                                        <img src="images/t-shirt-9.jpg" alt="" class="img-fluid rounded-4">
+                                        <h5 >Graphic Printed Cotton Oversized T-shirt</h5>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star checked text-warning"></span>
+                                        <span class="fa fa-star text-warning"></span>
+                                        <span class="fa fa-star"></span><span>  4.5/5</span>
+                                        <h6>&#8377;395</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Modal1 -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" >
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"> 
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body p-0">
+                        <div class="container-fluid g-0">
+                            <div class="row">
+                                <div class="col-md-4 p-5">
+                                    <h2>Login</h2>
+                                    <p>Get access to your Orders, Wishlist and Recommendations</p>
+                                </div>
+                                <div class="col-md-8 d-flex flex-column p-5">
+                                    <div class="row mb-5 pb-5">
+                                        <div class="col">
+                                            <form class="row g-3">
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control" id="floatingInput"
+                                                        placeholder="name@example.com">
+                                                    <label for="floatingInput">Enter Email/Mobile number</label>
+                                                    <p><small>By continuing, you agree to Trandz's Terms of Use and
+                                                            Privacy
+                                                            Policy.</small></p>
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button class="btn" type="button">Request OTP</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-end mt-5 pt-5">
+                                        <div class="col text-center">
+                                            <a href="#exampleModal2" data-bs-toggle="modal">New to Trandz? Create an
+                                                account</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal2 -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"> 
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body p-0">
+                        <div class="container-fluid g-0">
+                            <div class="row">
+                                <div class="col-md-4 p-5">
+                                <h2>Looks like you're new here!
+                                    </h2>
+                                    <p>Sign up with your mobile number to get started</p>
+                                </div>
+                                <div class="col-md-8 d-flex flex-column p-5">
+                                    <div class="row mb-5 pb-5">
+                                        <div class="col">
+                                            <form class="row g-3">
+                                                <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control" id="floatingInput"
+                                                        placeholder="name@example.com">
+                                                    <label for="floatingInput">Enter Mobile number</label>
+                                                    <p><small>By continuing, you agree to Trandz's Terms of Use and
+                                                            Privacy
+                                                            Policy.</small></p>
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button class="btn"
+                                                        type="button">Continue</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-end mt-5 pt-5">
+                                        <div class="col text-center">
+                                            <a href="#exampleModal1" data-bs-toggle="modal">Existing User? Log in</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <!-- place footer here -->
+            <div class="container-fluid footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 text-center text-lg-start order-4 order-lg-0">
+                            <img src="images/footer-logo.png" alt="" width="150px" height="auto">
+                            <p>We have clothes that suits your style and which you're proud to wear. from women to men.</p>
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <p>&copy; 2025 www.trendz.com. All rights reserved.</p>
+                        </div>
+                        <div class="col-4 offset-lg-1 col-lg-3 text-center text-md-start">
+                            <h3>company</h3>
+                            <ul>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">feature</a></li>
+                                <li><a href="#">works</a></li>
+                                <li><a href="#">career</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4 col-lg-2 text-center text-md-start">
+                            <h3>help</h3>
+                            <ul>
+                                <li><a href="#">customer support</a></li>
+                                <li><a href="#">delivery details</a></li>
+                                <li><a href="#">terms & conditions</a></li>
+                                <li><a href="#">privacy policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4 col-lg-2 text-center text-md-start">
+                            <h3>faq</h3>
+                            <ul>
+                                <li><a href="#">account</a></li>
+                                <li><a href="#">manage deliveries</a></li>
+                                <li><a href="#">orders</a></li>
+                                <li><a href="#">payments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- create a bottom to top bar -->
+        <script>
+            const backToTop = document.getElementById('back-to-top');
+                window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.style.display = 'block';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            })
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            })
+        </script>
+        <!-- light to dark mode toggle -->
+        <script>
+            const body = document.querySelector('body');
+            const btn = document.querySelector('.btn-mode');
+            const icon = document.querySelector('.btn-icon');
+    
+            //to save the dark mode use the object "local storage".
+    
+            //function that stores the value true if the dark mode is activated or false if it's not.
+            function store(value){
+              localStorage.setItem('darkmode', value);
+            }
+    
+            //function that indicates if the "darkmode" property exists. It loads the page as we had left it.
+            function load(){
+              const darkmode = localStorage.getItem('darkmode');
+            
+              //if the dark mode was never activated
+              if(!darkmode){
+                store(false);
+                icon.classList.add('fa-sun');
+              } else if( darkmode == 'true'){ //if the dark mode is activated
+                body.classList.add('darkmode');
+                icon.classList.add('fa-moon');
+              } else if(darkmode == 'false'){ //if the dark mode exists but is disabled
+                icon.classList.add('fa-sun');
+              }
+            }
+    
+    
+            load();
+    
+            btn.addEventListener('click', () => {
+            
+              body.classList.toggle('darkmode');
+              icon.classList.add('animated');
+            
+              //save true or false
+              store(body.classList.contains('darkmode'));
+            
+              if(body.classList.contains('darkmode')){
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+              }else{
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+              }
+          
+              setTimeout( () => {
+                icon.classList.remove('animated');
+              }, 500)
+            })
+            
+        </script>
+        <script>
+           $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            })
+        </script>
+        <!-- slider for clothes -->
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("demo");
+              let captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+        <script>
+            // Add your JavaScript code here
+            document.getElementById("searchBtn").addEventListener("click", function () {
+                document.getElementById("searchBar").style.display = "block";
+            })
+            document.getElementById("closeSearch").addEventListener("click", function () {
+                document.getElementById("searchBar").style.display = "none";
+            })
+            document.addEventListener("click", function (event) {
+                let searchBar = document.getElementById("searchBar");
+                let searchBtn = document.getElementById("searchBtn");
+                if (!searchBar.contains(event.target) && !searchBtn.contains(event.target)) {
+                    searchBar.style.display = "none";
+                }
+            })
+        </script>
+        <script>
+            filterSelection("all");
+            // Execute the function and show all columns
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("column");
+                if (c == "all") c = "";
+                // Add the "show class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+            }
+            // Show filtered elements
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {
+                        element.className += " " + arr2[i];
+                    }
+                }
+            }
+            // Hide elements that are not selected
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

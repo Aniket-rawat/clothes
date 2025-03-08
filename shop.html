@@ -1,0 +1,1421 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Shop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- font-awesome 4.7.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="shop-style.css">
+    <style>
+        .container {
+            max-width: 1600px !important;
+        }
+
+        .card img {
+            width: 100%;
+            height: 376.56px;
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 376.56px;
+        }
+        #searchBar {
+            display: none;
+        }
+
+        .custom-width {
+            width: 100%;
+        }
+        input{
+            width: 100%;
+        }
+        
+        .accordion-button:focus{
+            background-color: #cfd3bc !important;
+            border-color: #a9ae91 !important;
+            box-shadow: 2px 2px 2px #cfd3bc !important;
+            color: #fff;
+        }
+        .accordion-button:not(.collapsed){
+            background-color: #cfd3bc !important;
+            color: #fff;
+        }
+        
+
+        @media (max-width:600px) {
+            .custom-width {
+                width: auto;
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-sm py-3">
+            <div class="container header d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+
+                    <img src="images/logo.png" alt=""  class="d-block img-fluid">
+                </a>
+                <!-- Search bar and cart icon outside the burger menu -->
+                <div class="d-flex custom-width justify-content-center ms-3">
+                    <div class="d-none d-lg-block w-100">
+                        <form class="input-group border-0 rounded-pill bg-white">
+                            <button class="btn border-0 my-2 my-sm-0" type="submit">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                            <input type="text" class="form-control border-0 me-sm-2 bg-transparent"  placeholder="Search" />
+
+                        </form>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center order-md-5">
+                    <button class="btn d-block d-lg-none" id="searchBtn">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                    <a href="cart.html" class="btn">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                    <a href="#exampleModal1" data-bs-toggle="modal" class="btn">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    </a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="btn-mode">
+                        <div class="btn-indicator">
+                            <div class="btn-icon-container">
+                                <i class="btn-icon fa-solid fa-sun"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse  order-md-3  col-lg-4" id="collapsibleNavId">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-nowrap" href="shop.html" aria-current="page">Shop
+                                <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-nowrap" href="#">New Arrivals</a>
+                        </li>
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link  text-nowrap dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"> categories</a>
+                            <div class="dropdown-menu mega-menu" aria-labelledby="dropdownId">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="dropdown-header">MEN</h5>
+                                        <a class="dropdown-item" href="#">T-Shirts</a>
+                                        <a class="dropdown-item" href="#">Shorts</a>
+                                        <a class="dropdown-item" href="#">Shirts</a>
+                                        <a class="dropdown-item" href="#">Hoodies</a>
+                                        <a class="dropdown-item" href="#">Jeans</a>
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="dropdown-header">WOMEN</h5>
+                                        <a class="dropdown-item" href="#">T-Shirts</a>
+                                        <a class="dropdown-item" href="#">Shorts</a>
+                                        <a class="dropdown-item" href="#">Shirts</a>
+                                        <a class="dropdown-item" href="#">Hoodies</a>
+                                        <a class="dropdown-item" href="#">Jeans</a>
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="dropdown-header">KIDS</h5>
+                                        <a class="dropdown-item" href="#">T-Shirts</a>
+                                        <a class="dropdown-item" href="#">Shorts</a>
+                                        <a class="dropdown-item" href="#">Shirts</a>
+                                        <a class="dropdown-item" href="#">Hoodies</a>
+                                        <a class="dropdown-item" href="#">Jeans</a>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Hidden Search Bar -->
+        <div class="container-fluid bg-light shadow-sm p-3" id="searchBar">
+            <div class="d-flex justify-content-center">
+                <input class="form-control me-sm-2" type="text" placeholder="Search" />
+                <button class="btn btn-danger" id="closeSearch">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+        </div> 
+    </header>
+    <button id="back-to-top"><i class="bi bi-caret-up-fill"></i></button>
+    <main>
+        <div class="container-fluid pt-lg-5">
+            <div class="container">
+                <div class="row d-lg-none bg-white border text-center py-2 g-0 m-filters">
+                    <div class="col">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+                            aria-controls="offcanvasBottom"><svg width="20" height="20" viewBox="0 0 256 256">
+                                <path fill="none" d="M0 0h256v256H0z"></path>
+                                <path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="12" d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56">
+                                </path>
+                            </svg> Sort</button>
+                    </div>
+                    <div class="col border-start">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                            aria-controls="staticBackdrop"><svg width="20" height="20" viewBox="0 0 256 256">
+                                <path fill="none" d="M0 0h256v256H0z"></path>
+                                <path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="12" d="M148 172H40M216 172h-28"></path>
+                                <circle cx="168" cy="172" r="20" fill="none" stroke="#111112" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="12"></circle>
+                                <path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="12" d="M84 84H40M216 84h-92"></path>
+                                <circle cx="104" cy="84" r="20" fill="none" stroke="#111112" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="12"></circle>
+                            </svg> Filter</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 d-none d-lg-block filter-col">
+                        <div class="row filter">
+                            <div class="col">
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="card">
+                                        <div class="card-header">Filters</div>
+                                    </div>
+                                    <div class="accordion-item ">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                Categories
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                                            <div class="accordion-body" id="myBtnContainer">
+                                                <button class="btn active d-block" onclick="filterSelection('all')">Show All</button>
+                                                    <button class="btn d-block" onclick="filterSelection('t-shirts')">T-Shirts</button>
+                                                    <button class="btn d-block" onclick="filterSelection('shorts')">Shorts</button>
+                                                    <button class="btn d-block" onclick="filterSelection('checkshirt')">Shirts</button>
+                                                    <button class="btn d-block" onclick="filterSelection('hoodies')">Hoodies</button>
+                                                    <button class="btn d-block" onclick="filterSelection('jeans')">Jeans</button>
+                                                <!-- <div id="myBtnContainer">
+                                                    <button class="btn active" onclick="filterSelection('all')">Show All</button>
+                                                    <button class="btn" onclick="filterSelection('t-shirts')">Men's T-Shirts</button>
+                                                    <button class="btn" onclick="filterSelection('casual')">Men's Casual Shirts</button>
+                                                    <button class="btn" onclick="filterSelection('formal')">Men's Formal Shirts</button>
+                                                    <button class="btn" onclick="filterSelection('kurtas')">Men's Kurtas</button>
+                                                    <button class="btn" onclick="filterSelection('ethnic')">Men's Ethnic Sets</button>
+                                                    <button class="btn" onclick="filterSelection('blazers')">Men's Blazers</button>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" >
+                                            <button class="accordion-button collapsed" type="button" 
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                                Brand
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        U.S. POLO ASSN.
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        PUMA
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Allen Solly
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        WROGN
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        ADIDAS
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Roadster
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThreee"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseThreee">
+                                                Gender
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseThreee" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Men
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Women
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        kids
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item ">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+                                                Dress Style
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <ul class="navbar-nav">
+                                                    <li class="nav-item"><a href="#" class="nav-link">Casual</a></li>
+                                                    <li class="nav-item"><a href="#" class="nav-link">Formal</a></li>
+                                                    <li class="nav-item"><a href="#" class="nav-link">Party</a></li>
+                                                    <li class="nav-item"><a href="#" class="nav-link">Gym</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                                Discount </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        30% or more
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        30% or more
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        40% or more
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        50% or more
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        60% or more
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        70% or more
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                                Size </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        2XS
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        XS
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        S
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        M
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        L
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        XL
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-10 shop ">
+                        <div class="row ">
+                            <div class="col">
+                                <p class="text-body-secondary lh-sm">
+                                    <small>
+                                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                                            aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                                <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                                            </ol>
+                                        </nav>
+                                    </small>
+                                </p>
+                                
+                                <p>Sort By</p>
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">Popularity</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">Price -- Low to
+                                            High</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-contact" type="button" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false">Price -- High to
+                                            Low</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-newest-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-disabled" type="button" role="tab"
+                                            aria-controls="pills-Newest" aria-selected="false">Newest First</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+                            <div class="col-md t-shirts column">
+                                <a href="buy.html" class="nav-link content">
+                                    <img src="images/Arrivals-img-1.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5 >T-shirt with tape detailes</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.5/5</span>
+                                    <h6>&#8377;395</h6>
+                                </a>
+                            </div>
+                            <div class="col-md jeans column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/Arrivals-img-2.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>skinny fit jeans</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.3/5</span>
+                                    <h6>&#8377;640</h6>
+                                </a>
+                            </div>
+                            <div class=" col-md checkshirt column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/Arrivals-img-3.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>checkered shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class="col-md t-shirts column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/Arrivals-img-4.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>sleeve striped t-shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  3.5/5</span>
+                                    <h6>&#8377;399</h6>
+                                </a>
+                            </div>
+                            <div class="col-md t-shirts column">
+                                <a href="buy.html" class="nav-link content">
+                                    <img src="images/t-shirt-1.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5 >Official Marvel Merchandise Iron Man Of War Graphic Printed T-Shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.5/5</span>
+                                    <h6>&#8377;395</h6>
+                                </a>
+                            </div>
+                            <div class=" col-md shorts column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shorts-2.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Dolce Crudo Women Black High-Rise Denim Shorts</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class="col-md jeans column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/jeans-1.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women Skinny Fit Mid-Rise Jeans</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.3/5</span>
+                                    <h6>&#8377;640</h6>
+                                </a>
+                            </div>
+                            <div class=" col-md shorts column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shorts-1.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>IntelliSmooth Solid Cotton Pace Shorts</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class=" col-md hoodies column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/hoodies-5.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Loose Fit Hoodie</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class=" col-md checkshirt column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shirt-1.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Men Comfort Checked Casual Shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class="col-md checkshirt column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shirt-2.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Men Slim Fit Tartan Checks Opaque Checked Casual Shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  3.5/5</span>
+                                    <h6>&#8377;399</h6>
+                                </a>
+                            </div>
+                            <div class=" col-md shorts column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shorts-3.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Men Mid-Rise Shorts</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class="col-md t-shirts column">
+                                <a href="buy.html" class="nav-link content">
+                                    <img src="images/t-shirt-2.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5 >X Harry Potter Graphic Printed Oversized Fit T-shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.5/5</span>
+                                    <h6>&#8377;395</h6>
+                                </a>
+                            </div>
+                            <div class="col-md jeans column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/jeans-2.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Men Slim Fit Mid Rise Clean Jeans</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.3/5</span>
+                                    <h6>&#8377;640</h6>
+                                </a>
+                            </div>
+                            <div class=" col-md hoodies column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/hoodies-1.jpeg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women Solid Hooded Oversized Sweatshirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class=" col-md shorts column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shorts-4.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women High-Rise Denim Denim Shorts</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class="col-md jeans column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/jeans-3.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women Loose-Fit Denim Pull-On Trousers</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  3.5/5</span>
+                                    <h6>&#8377;399</h6>
+                                </a>
+                            </div>
+                            <div class=" col-md hoodies column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/hoodies-2.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women Solid Hooded Oversized Sweatshirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class=" col-md shorts column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shorts-5.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Men Running Sports Shorts</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class="col-md t-shirts column">
+                                <a href="buy.html" class="nav-link content">
+                                    <img src="images/t-shirt-3.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5 >Graphic Printed Round Neck Oversized T-shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.5/5</span>
+                                    <h6>&#8377;395</h6>
+                                </a>
+                            </div>
+                            <div class="col-md jeans column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/jeans-4.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women Light Fade Stretchable Cargo Style Jeans With Side Slits</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.3/5</span>
+                                    <h6>&#8377;640</h6>
+                                </a>
+                            </div>
+                            <div class=" col-md checkshirt column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shirt-3.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women Spread Collar Vertical Striped Cotton Casual Shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class=" col-md hoodies column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/hoodies-3.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Men Solid Hooded Sweatshirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class="col-md t-shirts column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/t-shirt-4.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women Solid Pure Cotton T-shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  3.5/5</span>
+                                    <h6>&#8377;399</h6>
+                                </a>
+                            </div>
+                            <div class="col-md t-shirts column">
+                                <a href="buy.html" class="nav-link content">
+                                    <img src="images/t-shirt-5.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5 >Graphic Printed Cotton Oversized T-shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.5/5</span>
+                                    <h6>&#8377;395</h6>
+                                </a>
+                            </div>
+                            <div class="col-md jeans column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/jeans-5.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Boys Light Fade Mid-Rise Stretchable Cargo Jeans</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4.3/5</span>
+                                    <h6>&#8377;640</h6>
+                                </a>
+                            </div>
+                            <div class=" col-md hoodies column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/hoodies-4.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Men Lifestyle Fleece Hooded Sweatshirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class=" col-md checkshirt column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shirt-4.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>The Lifestyle Co. Women Cuban Collar Textured Cotton Boxy Casual Shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class=" col-md hoodies column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/hoodies-6.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Women Lavender Puff-Sleeve Solid Hooded Sweatshirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  4/5</span>
+                                    <h6>&#8377;599</h6>
+                                </a> 
+                            </div>
+                            <div class="col-md checkshirt column">
+                                <a href="#" class="nav-link content">
+                                    <img src="images/shirt-5.jpg" alt="" class="img-fluid rounded-4">
+                                    <h5>Regular Fit Oxford Shirt</h5>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star checked text-warning"></span>
+                                    <span class="fa fa-star text-warning"></span>
+                                    <span class="fa fa-star"></span><span>  3.5/5</span>
+                                    <h6>&#8377;399</h6>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="row my-3">
+                            <div class="col">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination pagination-lg justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active" aria-current="page">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Off-Canvas Sort-->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">SORT BY</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body small p-0">
+            <ul class="list-group">
+                <li class="list-group-item  border-0 d-flex justify-content-between align-items-center">
+                    Popularity
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    </div>
+                </li>
+                <li class="list-group-item  border-0 d-flex justify-content-between align-items-center">
+                    Price -- Low to High
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    </div>
+                </li>
+                <li class="list-group-item  border-0 d-flex justify-content-between align-items-center">
+                    Price -- High to Low
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    </div>
+                </li>
+                <li class="list-group-item  border-0 d-flex justify-content-between align-items-center">
+                    Newest First
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Off-Canvas Filter-->
+    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+        aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">Filters</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+         <!-- Mobile or tablet Filter-->
+        <div class="offcanvas-body">
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">Categories</button>
+                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-brand" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">Brand</button>
+                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-gender" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false">Gender</button>
+                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-dress" type="button" role="tab" aria-controls="v-pills-settings"
+                        aria-selected="false">Dress Style</button>
+                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-discount" type="button" role="tab" aria-controls="v-pills-settings"
+                        aria-selected="false">Discount</button>
+                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-size" type="button" role="tab" aria-controls="v-pills-settings"
+                        aria-selected="false">Size</button>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab" tabindex="0">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" class="nav-link">T-Shirts</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Shorts</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Shirts</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Hoodie</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Jeans</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-brand" role="tabpanel"
+                        aria-labelledby="v-pills-brand-tab" tabindex="0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                U.S. POLO ASSN.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                PUMA
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Allen Solly
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                WROGN
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                ADIDAS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Roadster
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-gender" role="tabpanel"
+                        aria-labelledby="v-pills-gender-tab" tabindex="0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Men
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Women
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                kids
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-dress" role="tabpanel"
+                        aria-labelledby="v-pills-dress-tab" tabindex="0">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" class="nav-link">Casual</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Formal</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Party</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Gym</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-discount" role="tabpanel"
+                        aria-labelledby="v-pills-discount-tab" tabindex="0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                30% or more
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                30% or more
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                40% or more
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                50% or more
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                60% or more
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                70% or more
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-size" role="tabpanel"
+                        aria-labelledby="v-pills-size-tab" tabindex="0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                2XS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                XS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                S
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                M
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                L
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                XL
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-price-tab" tabindex="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+     <!-- Modal1 -->
+     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered modal-lg" >
+            <div class="modal-content" >
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"> 
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body p-0">
+                    <div class="container-fluid g-0">
+                        <div class="row">
+                            <div class="col-md-4 p-5">
+                                <h2>Login</h2>
+                                <p>Get access to your Orders, Wishlist and Recommendations</p>
+                            </div>
+                            <div class="col-md-8 d-flex flex-column p-5">
+                                <div class="row mb-5 pb-5">
+                                    <div class="col">
+                                        <form class="row g-3">
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="floatingInput"
+                                                    placeholder="name@example.com">
+                                                <label for="floatingInput">Enter Email/Mobile number</label>
+                                                <p><small>By continuing, you agree to Trandz's Terms of Use and
+                                                        Privacy
+                                                        Policy.</small></p>
+                                            </div>
+                                            <div class="d-grid">
+                                                <button class="btn" type="button">Request OTP</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row align-items-end mt-5 pt-5">
+                                    <div class="col text-center">
+                                        <a href="#exampleModal2" data-bs-toggle="modal">New to Trandz? Create an
+                                            account</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal2 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"> 
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body p-0">
+                    <div class="container-fluid g-0">
+                        <div class="row">
+                            <div class="col-md-4 p-5">
+                            <h2>Looks like you're new here!
+                                </h2>
+                                <p>Sign up with your mobile number to get started</p>
+                            </div>
+                            <div class="col-md-8 d-flex flex-column p-5">
+                                <div class="row mb-5 pb-5">
+                                    <div class="col">
+                                        <form class="row g-3">
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="floatingInput"
+                                                    placeholder="name@example.com">
+                                                <label for="floatingInput">Enter Mobile number</label>
+                                                <p><small>By continuing, you agree to Trandz's Terms of Use and
+                                                        Privacy
+                                                        Policy.</small></p>
+                                            </div>
+                                            <div class="d-grid">
+                                                <button class="btn"
+                                                    type="button">Continue</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row align-items-end mt-5 pt-5">
+                                    <div class="col text-center">
+                                        <a href="#exampleModal1" data-bs-toggle="modal">Existing User? Log in</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- place footer here -->
+        <div class="container-fluid footer mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 text-center text-lg-start order-4 order-lg-0">
+                        <img src="images/footer-logo.png" alt="" width="150px" height="auto">
+                        <p>We have clothes that suits your style and which you're proud to wear. from women to men.</p>
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>&copy; 2025 www.trendz.com. All rights reserved.</p>
+                    </div>
+                    <div class="col-4 offset-lg-1 col-lg-3 text-center text-md-start">
+                        <h3>company</h3>
+                        <ul>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">feature</a></li>
+                            <li><a href="#">works</a></li>
+                            <li><a href="#">career</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-lg-2 text-center text-md-start">
+                        <h3>help</h3>
+                        <ul>
+                            <li><a href="#">customer support</a></li>
+                            <li><a href="#">delivery details</a></li>
+                            <li><a href="#">terms & conditions</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-lg-2 text-center text-md-start">
+                        <h3>faq</h3>
+                        <ul>
+                            <li><a href="#">account</a></li>
+                            <li><a href="#">manage deliveries</a></li>
+                            <li><a href="#">orders</a></li>
+                            <li><a href="#">payments</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- create a bottom to top bar -->
+    <script>
+        const backToTop = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        })
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+    </script>
+    <!-- light to dark mode toggle -->
+    <script>
+        const body = document.querySelector('body');
+        const btn = document.querySelector('.btn-mode');
+        const icon = document.querySelector('.btn-icon');
+
+        //to save the dark mode use the object "local storage".
+
+        //function that stores the value true if the dark mode is activated or false if it's not.
+        function store(value){
+          localStorage.setItem('darkmode', value);
+        }
+
+        //function that indicates if the "darkmode" property exists. It loads the page as we had left it.
+        function load(){
+          const darkmode = localStorage.getItem('darkmode');
+        
+          //if the dark mode was never activated
+          if(!darkmode){
+            store(false);
+            icon.classList.add('fa-sun');
+          } else if( darkmode == 'true'){ //if the dark mode is activated
+            body.classList.add('darkmode');
+            icon.classList.add('fa-moon');
+          } else if(darkmode == 'false'){ //if the dark mode exists but is disabled
+            icon.classList.add('fa-sun');
+          }
+        }
+
+
+        load();
+
+        btn.addEventListener('click', () => {
+        
+          body.classList.toggle('darkmode');
+          icon.classList.add('animated');
+        
+          //save true or false
+          store(body.classList.contains('darkmode'));
+        
+          if(body.classList.contains('darkmode')){
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+          }else{
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+          }
+      
+          setTimeout( () => {
+            icon.classList.remove('animated');
+          }, 500)
+        })
+        
+    </script>
+    <!-- Gallery Filters -->
+    <script>
+        filterSelection("all");
+        // Execute the function and show all columns
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            // Add the "show class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <script>
+        // Add your JavaScript code here
+        document.getElementById("searchBtn").addEventListener("click", function () {
+            document.getElementById("searchBar").style.display = "block";
+        })
+        document.getElementById("closeSearch").addEventListener("click", function () {
+            document.getElementById("searchBar").style.display = "none";
+        })
+        document.addEventListener("click", function (event) {
+            let searchBar = document.getElementById("searchBar");
+            let searchBtn = document.getElementById("searchBtn");
+            if (!searchBar.contains(event.target) && !searchBtn.contains(event.target)) {
+                searchBar.style.display = "none";
+            }
+        })
+    </script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
