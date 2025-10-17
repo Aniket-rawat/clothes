@@ -17,6 +17,11 @@
     --light-color: #f7f7f7;
     --light-icon-color: #FFDE59;  
 }
+
+.owl-nav{
+    display: none !importanr;
+}
+
 a{
     text-decoration: none !important;
 }
@@ -624,5 +629,6 @@ del{
         margin-top: 0 !important;
         padding-top: 0 !important;
     }
+
 
 }
