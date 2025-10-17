@@ -17,6 +17,11 @@
     --light-color: #f7f7f7;
     --light-icon-color: #FFDE59;  
 }
+
+.owl-nav {
+    display: none !important;
+}
+
 /* light to dark mode CSS */
 .btn-mode{
   background-color: #fff;
@@ -792,4 +797,5 @@ header{
     footer{
         margin-top: 50px;
     }
+
 }
